@@ -1,0 +1,154 @@
+<div class="wrapper">
+  <app-header></app-header>
+  <app-leftmenu></app-leftmenu>
+  <div class="content-wrapper">
+    <section class="content">
+      <div class="box box-primary">
+        <form class="form-horizontal">
+          <div class="box-header with-border">
+            <h3 class="box-title"><a href="#">Create a Mix</a></h3>
+          </div>
+          <div class="box-body">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Design Type</label>
+              <div class="col-sm-10">
+                <div class="radio">
+                  <label><input type="radio" name="design-type" value="Existing" checked> Existing &nbsp;</label>
+                  <label><input type="radio" name="design-type" value="New"> New </label>
+                </div>
+              </div>
+            </div>
+            <div class="" id="ExistingDesign">
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Plant</label>
+                <div class="col-sm-5">
+                  <select class="form-control">
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Series</label>
+                <div class="col-sm-5">
+                  <select class="form-control">
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Mix Description</label>
+                <div class="col-sm-5">
+                  <select class="form-control">
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Material(s)</label>
+                <div class="col-sm-5">
+                  <select class="form-control" multiple>
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 1">Option 3</option>
+                    <option value="Option 2">Option 4</option>
+                    <option value="Option 1">Option 5</option>
+                    <option value="Option 2">Option 6</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="hidden" id="NewDesign">
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Plant</label>
+                <div class="col-sm-5">
+                  <select class="form-control">
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Mix ID</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Mix Description</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Office Code</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Mix Classification</label>
+                <div class="col-sm-5">
+                  <select class="form-control">
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Upcharge($)</label>
+                <div class="col-sm-5">
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Season</label>
+                <div class="col-sm-5">
+                  <select class="form-control">
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Excluded from Price List</label>
+                <div class="col-sm-10">
+                  <div class="checkbox">
+                    <label><input type="checkbox" value=""></label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Material(s)</label>
+                <div class="col-sm-5">
+                  <select class="form-control" multiple>
+                    <option value="">Choose</option>
+                    <option value="Option 1">Option 1</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 1">Option 3</option>
+                    <option value="Option 2">Option 4</option>
+                    <option value="Option 1">Option 5</option>
+                    <option value="Option 2">Option 6</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary pull-right">Create Mix</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <app-footer></app-footer>
+</div>
