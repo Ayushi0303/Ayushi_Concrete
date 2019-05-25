@@ -1,6 +1,8 @@
 ﻿import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; 
 
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -16,6 +18,7 @@ import { MixMaterialListingComponent } from './mixes/mix-material-listing/mix-ma
 import { MixDescriptionsComponent } from './mixes/mix-descriptions/mix-descriptions.component';
 import { CheckPlantMixDesignComponent } from './mixes/check-plant-mix-design/check-plant-mix-design.component';
 import { MixDesignCostsComponent } from './mixes/mix-design-costs/mix-design-costs.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,10 @@ import { MixDesignCostsComponent } from './mixes/mix-design-costs/mix-design-cos
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
