@@ -3,6 +3,7 @@ const UserRegister = require('../models/userregister'); //import user model
 const router = express.Router();
 const bcrypt = require("bcrypt");//for password hashing
 const jwt = require("jsonwebtoken");
+const checkAuth = require("../middleware/check-auth");
 
 //anything which has /signup will reach this route
 //in the above func after we recv /signup we want to create a new user and store  in database 
@@ -78,19 +79,19 @@ router.post("/login",(req,res) => {
     })
 
 });
-    //console.log(req.body)
 
-// router.post("/logout",(req,res)=> {
-//     console.log("logout request" + req.body.email);
-//     User.findOne({
-//         email:req.body.email
-//     })
-//     .then(user => {
-//            return res.status(200).json({
-//                 message: "User Logged Out"
-//             })
-//         })
-// });
+router.post("/logout",
+            checkAuth, (req,res)=> {
+    console.log("logout request" + req.body.email);
+    User.findOne({
+        email:req.body.email
+    })
+    .then(user => {
+           return res.status(200).json({
+                message: "User Logged Out"
+            })
+        })
+});
 
    
 module.exports = router;

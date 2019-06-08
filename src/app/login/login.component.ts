@@ -20,12 +20,12 @@ export class LoginComponent  {
   }
   onLogin(form: NgForm)
   {
-    console.log(form.value);
+    //console.log(form.value);
     if(form.invalid){
       return;
     }
     this.authService.loginUser(form.value.username, form.value.password);
-    this.route.navigate(['/create-mix'])
+    //this.route.navigate(['/create-mix'])
 
   }
 }

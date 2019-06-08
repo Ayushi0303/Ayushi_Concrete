@@ -12,23 +12,25 @@ import {MixDescriptionsComponent} from './mixes/mix-descriptions/mix-description
 import {CheckPlantMixDesignComponent} from './mixes/check-plant-mix-design/check-plant-mix-design.component';
 import {MixDesignCostsComponent} from './mixes/mix-design-costs/mix-design-costs.component';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path:'login', component: LoginComponent  },
   { path:'register', component: RegisterComponent },
-  { path:'dashboard', component: DashboardComponent },
-  { path:'mix-search', component: MixSearchComponent },
-  { path:'create-mix', component: CreateMixComponent },
-  { path:'copy-mix-design', component: CopyMixDesignComponent },
-  { path:'mix-material-listing', component: MixMaterialListingComponent },
-  { path:'mix-descriptions', component: MixDescriptionsComponent },
-  { path:'check-plant-mix-design', component: CheckPlantMixDesignComponent },
-  { path:'mix-design-costs', component: MixDesignCostsComponent },
+  { path:'dashboard', component: DashboardComponent,  canActivate: [AuthGuard] },
+  { path:'mix-search', component: MixSearchComponent , canActivate: [AuthGuard]},
+  { path:'create-mix', component: CreateMixComponent , canActivate: [AuthGuard]},
+  { path:'copy-mix-design', component: CopyMixDesignComponent , canActivate: [AuthGuard]},
+  { path:'mix-material-listing', component: MixMaterialListingComponent , canActivate: [AuthGuard]},
+  { path:'mix-descriptions', component: MixDescriptionsComponent , canActivate: [AuthGuard]},
+  { path:'check-plant-mix-design', component: CheckPlantMixDesignComponent , canActivate: [AuthGuard]},
+  { path:'mix-design-costs', component: MixDesignCostsComponent , canActivate: [AuthGuard]},
   { path:'**', component: LoginComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }

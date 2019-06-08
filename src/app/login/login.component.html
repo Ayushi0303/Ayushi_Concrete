@@ -5,16 +5,16 @@
   <p class="login-box-msg">Sign in to start your dashboard</p>
   <form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
     <div class="form-group has-feedback">
-      <input type="text" class="form-control" ngModel name="username" placeholder="Username" />
+      <input type="text" class="form-control" ngModel name="username" required placeholder="Username" />
       <span class="glyphicon glyphicon-user form-control-feedback"></span>
     </div>
     <div class="form-group has-feedback">
-      <input type="password" class="form-control" ngModel name="password" placeholder="Password" >
+      <input type="password" class="form-control" ngModel name="password" required placeholder="Password" #pw="ngModel" >
+      <span class="help-block" *ngIf="!pw.valid && pw.touched"> Please enter password</span>
       <span class="glyphicon glyphicon-lock form-control-feedback"></span>
     </div>
     <div class="form-group has-feedback">
       <button type="submit" class="btn btn-primary btn-block btn-flat" >Login</button>
-
     </div>
   </form>
 
